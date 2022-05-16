@@ -4,7 +4,7 @@
     <archiveIndexEnabled>false</archiveIndexEnabled>
     <helpLinksEnabled>true</helpLinksEnabled>
     <fileUploadMaxSizeMb>100</fileUploadMaxSizeMb>
-    <revision>2</revision>
+    <revision>5</revision>
     <dateFormat>dd-MM-yy HH:mm:ss z</dateFormat>
     <addons>
         <showAddonsInfo>true</showAddonsInfo>
@@ -100,9 +100,12 @@
             <terraformType>MODULE</terraformType>
         </localRepository>
         <localRepository>
-            <key>docker-local</key>
+            <key>docker_registry</key>
             <type>docker</type>
+            <description></description>
+            <notes></notes>
             <includesPattern>**/*</includesPattern>
+            <excludesPattern></excludesPattern>
             <repoLayoutRef>simple-default</repoLayoutRef>
             <dockerApiVersion>V2</dockerApiVersion>
             <forceNugetAuthentication>false</forceNugetAuthentication>
@@ -173,6 +176,18 @@
             <synchronizeProperties>false</synchronizeProperties>
             <listRemoteFolderItems>false</listRemoteFolderItems>
             <rejectInvalidJars>false</rejectInvalidJars>
+            <contentSynchronisation>
+                <enabled>false</enabled>
+                <statistics>
+                    <enabled>false</enabled>
+                </statistics>
+                <properties>
+                    <enabled>false</enabled>
+                </properties>
+                <source>
+                    <originAbsenceDetection>false</originAbsenceDetection>
+                </source>
+            </contentSynchronisation>
             <blockMismatchingMimeTypes>true</blockMismatchingMimeTypes>
             <mismatchingMimeTypesOverrideList></mismatchingMimeTypesOverrideList>
             <bypassHeadRequests>false</bypassHeadRequests>
@@ -199,11 +214,9 @@
             <artifactoryRequestsCanRetrieveRemoteArtifacts>false</artifactoryRequestsCanRetrieveRemoteArtifacts>
             <resolveDockerTagsByTimestamp>false</resolveDockerTagsByTimestamp>
             <repositories>
-                <repositoryRef>docker-local</repositoryRef>
                 <repositoryRef>docker-remote</repositoryRef>
             </repositories>
             <pomRepositoryReferencesCleanupPolicy>discard_active_reference</pomRepositoryReferencesCleanupPolicy>
-            <defaultDeploymentRepo>docker-local</defaultDeploymentRepo>
             <virtualCacheConfig>
                 <virtualRetrievalCachePeriodSecs>600</virtualRetrievalCachePeriodSecs>
             </virtualCacheConfig>
