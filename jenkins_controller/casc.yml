@@ -76,7 +76,7 @@ unclassified:
   sonarGlobalConfiguration:
     buildWrapperEnabled: true
     installations:
-    - name: "MySonar Server"
+    - name: "SonarQube"
       serverUrl: "http://192.168.44.44:9000"
       triggers:
         skipScmCause: false
@@ -84,7 +84,7 @@ unclassified:
 tool:
   sonarRunnerInstallation:
     installations:
-    - name: "MySonar Scanner"
+    - name: "SonarQube"
       properties:
       - installSource:
           installers:
